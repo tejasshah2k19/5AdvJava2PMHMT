@@ -1,0 +1,112 @@
+
+
+servlet :-	
+
+			logic 
+			server ->requst -> accept -> process -> response 
+			
+			
+			Servlet 
+			HttpServlet
+		
+		
+where to create servlet class?
+ans : controller 
+
+java -> com -> google->gmap->navigation->controller 
+java -> com -> google->gmap->distance->controller 
+java -> com -> google->adsense->payment->controller 
+		
+		
+java->com->controller
+java->com->bean
+java->com->dao 
+java->com->util
+
+steps to create servlet:---
+
+1)  class extends HttpServlet 
+2)  service(HttpServletRequest request,HttpServletResponse response)
+3)  @WebServlet("/url")  	
+
+
+
+
+internet ->download -> serlvet.jar
+->gpay.jar 
+->paypal.jar
+->gmail.jar
+->160by2s.jar
+->twilio
+->razorpay.jar
+
+tomcat->lib->servlet-api.jar 
+
+
+how to link jar file? 
+
+project -> right click -> properties -> java build path -> 
+	click libraries -> class path click -> add external jar button -> 
+	C:\program files\apache software foundation\tomcat\lib\servlet-api.jar -> open ->
+	click order and export tab -> select all button -> apply and close 
+	
+
+
+servlet --->
+
+InputUSD.html{10$} -> submit -> ConvertorServlet -> 830RS 
+
+---------------------------------------------------------------------------------
+
+.html -> java logic ? 
+
+html --> jsp { java servlet pages } {java server pages } 
+
+InputUSD.html ---> InputUSD.jsp
+
+
+html -> html 
+
+jsp -> html + java 
+		html is default 
+		java -> symbols 
+						scriptlet    <%   %>  : write java logic 
+						expression   <%=  %>  : print java variable 
+						
+--------------------------------------------------------------------------------
+
+html -> static 
+jsp -> dynamic 
+
+ 	<%
+ 		int x=10;
+ 	%>
+
+	<%=x %>	
+	
+	
+	
+	<%
+ 		Date obj = new Date();
+ 	%>
+ 	
+ 	Today => <%=obj %>
+	
+	
+	
+	
+	
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+		
