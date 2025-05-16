@@ -24,8 +24,9 @@ public class AdditionServlet extends HttpServlet {
 		int ans = n1 + n2; 
 		
 		//send ans -> OutputResult 
+		request.setAttribute("ans", ans);//data send -> servlet -> jsp 
+
 		//navigate to OutputResult.jsp
-		
 		RequestDispatcher rd  = request.getRequestDispatcher("OutputResult.jsp");
 		rd.forward(request, response);
 		
