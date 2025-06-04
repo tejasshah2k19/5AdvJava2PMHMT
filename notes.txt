@@ -92,10 +92,70 @@ jsp -> dynamic
  	
  	Today => <%=obj %>
 	
+
+
+--------------------------------------------------------------------------------
 	
+jsp -> form -> component -> 
+
+StudentForm.jsp 
+
+FirstName  	: [         ] 
+Email		: [			]
+Password	: [			]
+
+Gender 		: Male()  Female() 
+ 
+Hobby		: Cricket[]  VolleyBall[]  PickelBall[]  BoxCricket[] 
+ 
+Address		:[             
+					
+						 ]  //TextArea 
+						 
+						  	
+City		: [dropdown] [Select City , Ahmedabad,Surat,Himmatnagar,Gandhinagar]
+
+ 
+					[Submit]
+					
+					
+					
+StudentForm.jsp ---> StudentServlet --> read ->set -> next jsp -> StudentInfo.jsp [ print all ] 
+					
+------------------------------------------------------------------------------------					 
+reusable webcomponent -> inclusion 
+
+1) static inclusion 
+	<%@ include file="Footer.jsp" %> 
 	
+2) dynamic inclusion 
+	<jsp:include page="Header.jsp" > 
 	
-	
+--------------------------------------------------------------------------------------	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
