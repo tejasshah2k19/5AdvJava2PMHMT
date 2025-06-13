@@ -141,6 +141,9 @@ jsp => directives
 	page directive 
 	
 ---------------------------------------------------------------------------------------
+user information store -> 
+
+cookie -> browser 
 
 
 
