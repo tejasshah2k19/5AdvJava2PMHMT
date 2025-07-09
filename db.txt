@@ -1,0 +1,73 @@
+
+
+mysql -u root -p 
+ 
+
+create database  hmtavengers ;
+
+
+use  hmtavengers; 
+
+
+
+create table -> 
+	users 
+	products 
+	carts 
+	payments
+	orders
+	
+	
+	users
+	friends 
+	post 
+	comment 
+	
+	
+	
+create table users (
+	userId integer primary key auto_increment,
+	firstName  varchar(20), 
+	lastName varchar(20), 
+	email varchar(30),
+	password varchar(30) 
+);	
+
+
+show tables; 
+
+
+desc users; 
+	
+	
+insert into users 
+	(firstName,lastName,email,password) 
+	values 
+	('ram','raghuvanshi','ram@yopmail.com','sitaram'); 
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+	
+
+

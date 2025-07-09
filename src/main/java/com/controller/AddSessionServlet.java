@@ -4,27 +4,23 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet("/AddCookieServlet")
-public class AddCookieServlet extends HttpServlet {
+@WebServlet("/AddSessionServlet")
+public class AddSessionServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	
-		//read 
-		String firstName = request.getParameter("firstName"); 
+
+		String firstName = request.getParameter("firstName");
+
+		HttpSession session = request.getSession();//get session 
+		session.setAttribute("firstName", firstName);
+
+		response.sendRedirect("ViewSession.jsp"); 
 		
-		//cookie create 
-		Cookie c = new Cookie("firstName", firstName);
-		c.setMaxAge(60*60*24*7);
-		
-		//set cookie into browser 
-		response.addCookie(c);
-		
-		response.sendRedirect("ViewCookie.jsp");
 	}
 }

@@ -143,7 +143,54 @@ jsp => directives
 ---------------------------------------------------------------------------------------
 user information store -> 
 
-cookie -> browser 
+cookie -> browser ->client side -> developer 
+
+session -> server -> server side -> create server 
+
+
+browser ->   
+--------------------------------------------------------------------------------------
+cookie {set name} {name} {browser-client side} {less secure}
+session {set name}  {name} {server-server side } {most secure}
+
+
+session created by server, we will ask to the server  
+
+
+//how to retrieve  session from server 
+HttpSession session = request.getSession();
+
+//how to set data in session 
+	//we want to set firstname in session 
+	session.setAttribute("firstName","Gabbar");
+	
+//jsp : how to get and print firstName
+${sessionScope.firstName}		
+---------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

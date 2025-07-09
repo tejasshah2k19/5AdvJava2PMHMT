@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	${cookie.firstName.value}
-	<br>
-	<a href="LogoutServlet">Logout</a>
+FirstName => ${sessionScope.firstName } <Br>
 
+<br>
+
+<A href="LogoutServlet">Logout</A>
 </body>
 </html>
