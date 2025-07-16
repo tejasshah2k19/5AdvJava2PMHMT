@@ -5,33 +5,26 @@ import java.sql.DriverManager;
 
 public class DbConnection {
 
-	public static void main(String[] args) {
-		System.out.println("hi..........");
+	public static Connection getConnection() {
 
-		// DbConnection open
-
-		//db -> driver file 
-		
+		String driverName = "com.mysql.cj.jdbc.Driver";
+		String dbUrl = "jdbc:mysql://localhost:3306/hmtavengers";
+		String dbUserName = "root";
+		String dbPassword = "root";
 		try {
 
-			String driverName = "com.mysql.cj.jdbc.Driver";
-			String dbUrl = "jdbc:mysql://localhost:3306/hmtavengers";
-			String userName = "root";
-			String password = "root";
-
-//			step1:  load driver into memory 
+			// step1 : load driver
 			Class.forName(driverName);
 
-//			step2:
-			Connection c = DriverManager.getConnection(dbUrl, userName, password);
-
-			if (c != null) {
-				System.out.println("DbConnected....");
-			}
+			// step2 : connection open
+			Connection c = DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
+			return c;
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
+		return null;
 	}
+
 }

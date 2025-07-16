@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.util.DbConnection;
+
 @WebServlet("/DBAddUserServlet")
 public class DBAddUserServlet extends HttpServlet {
 
@@ -22,39 +24,24 @@ public class DBAddUserServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 
-		// validation
-
-		// dn insert ->
-
-		// db connection
-
-		// db insertion
-		String driverName = "com.mysql.cj.jdbc.Driver";
-		String dbUrl = "jdbc:mysql://localhost:3306/hmtavengers";
-		String dbUserName = "root";
-		String dbPassword = "root";
 		try {
-			// load driver
-			Class.forName(driverName);
 
 			// establish connection
-			Connection dbConnection = DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
-
+			Connection dbConnection = DbConnection.getConnection();
 			// query
 			PreparedStatement pstmt = dbConnection
 					.prepareStatement("insert into users (firstName,lastName,email,password) values (?,?,?,?)");
 
-			pstmt.setString(1,firstName);
+			pstmt.setString(1, firstName);
 			pstmt.setString(2, lastName);
 			pstmt.setString(3, email);
 			pstmt.setString(4, password);
-			
+
 			// run
-			pstmt.executeUpdate(); 
-			
+			pstmt.executeUpdate();
+
 			System.out.println("record inserted........");
-			
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

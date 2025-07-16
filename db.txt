@@ -47,6 +47,60 @@ insert into users
 	
 	
 		
+product >
+				name		: iphone 17 
+				category	: iphone 
+				price 		: 200000 
+				qty			: 15 
+				
+
+create table products(
+	productId integer primary key auto_increment,
+	productName varchar(30),
+	category varchar(30),
+	price integer, 
+	qty integer
+); 				
+					
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
