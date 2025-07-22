@@ -36,7 +36,6 @@ public class DBAddUserServlet extends HttpServlet {
 			pstmt.setString(2, lastName);
 			pstmt.setString(3, email);
 			pstmt.setString(4, password);
-
 			// run
 			pstmt.executeUpdate();
 
